@@ -1,7 +1,7 @@
 /**
  * Created by yuanjianxin on 2018/2/14.
  */
-export const port='3010';
+export const port='8001';
 export const DbConfigs=[
 
     {
@@ -45,4 +45,12 @@ export const redisConfig={
     port:'6379',
     size:5,
     autoCheckAndCreate:true
+}
+
+export const configService={
+    host:'http://127.0.0.1',
+    port:'8000',
+    serviceName:'DB_SERVICE',
+    serviceHost:'http://127.0.0.1',
+    servicePort:'8001'
 }

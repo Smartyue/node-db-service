@@ -13,6 +13,7 @@ const appConfig=require('./config/app.config');
 const RedisHandler=require('./utils/RedisUtil');
 const app=new Koa();
 const auth=require('./middleware/auth');
+const configServiceHandler=require('yue-config-service-handler');
 app.use(koaBody({multipart: true}))
 app.use(logger)
 app.use(configs)
@@ -38,6 +39,11 @@ app.use(router.routes());
         let server=app.listen(appConfig.port);
 
         console.log(`==DbService start at host【${server.address().address}】   port【${server.address().port}】==`)
+
+        // init configService
+        configServiceHandler.instance.init(appConfig.configService);
+        // register config
+        await configServiceHandler.instance.register();
     }
 )()
 

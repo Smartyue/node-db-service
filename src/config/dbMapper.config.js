@@ -9,8 +9,10 @@ module.exports={
 
         lendingone:['tbl_user','tbl_loan','tbl_profile','tbl_message','admin'], // database:[ tables ...]
 
-        yue:[],
+    },
 
+    yue:{
+        yue:['verify_question']
     }
 
 }
