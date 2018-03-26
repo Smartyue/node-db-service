@@ -14,7 +14,9 @@
     "log4js": "^2.5.3",
     "mysql2": "^1.5.2",
     "redis": "^2.8.0",
-    "sequelize": "^4.35.2"
+    "sequelize": "^4.35.2",
+    "yue-config-service-handler": "0.0.1",
+    "yue-http-util": "^1.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.4.0",
